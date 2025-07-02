@@ -82,7 +82,7 @@ class CramersV(PairWisemetrics):
             # find the resulting cramer association value using scipy's
             # association method
             res_cramer = association(input_tab, method='cramer')
-            self.matrix[i][j], self.matrix[j][i] = res_cramer, res_cramer
+            self.matrix.loc[i, j], self.matrix.loc[j, i] = res_cramer, res_cramer
 
 
     def fit(self):
